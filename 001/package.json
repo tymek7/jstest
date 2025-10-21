@@ -1,0 +1,13 @@
+{
+  "name": "testy",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  
+  "main": "app.js",
+  "scripts": {
+    "test": "set NODE_OPTIONS=--experimental-vm-modules && npx jest"
+  }
+}
