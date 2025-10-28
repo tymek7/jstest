@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FizzBuzzator 🥴</title>
+
+  <style>
+    /* === FUN MENU === */
+    .funbar {
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 25px;
+      border-bottom: 4px solid #ff6f61;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+    }
+
+    .funbar h1 {
+      margin: 0;
+      font-size: 22px;
+      transform: rotate(-2deg);
+      text-shadow: 1px 1px 0px #fff;
+    }
+
+    .funbar ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .funbar a {
+      text-decoration: none;
+      background: white;
+      color: #ff6f61;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 2px 2px 0px #ff6f61;
+      transition: all 0.2s ease;
+    }
+
+    .funbar a:hover {
+      transform: rotate(-3deg) scale(1.1);
+      background: #ff6f61;
+      color: white;
+      box-shadow: 3px 3px 0px #fff;
+    }
+
+    /* === STRONA === */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #fff8f0, #ffdede);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    label {
+      margin-top: 50px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      text-shadow: 1px 1px 0px #fff;
+    }
+
+    input {
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 2px solid #ff6f61;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    input:focus {
+      border-color: #ff9a9e;
+      box-shadow: 0 0 10px rgba(255, 111, 97, 0.3);
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background: #ff6f61;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 3px 3px 0px #ff9a9e;
+      transition: all 0.2s;
+    }
+
+    button:hover {
+      background: #ff3b2e;
+      transform: translateY(-3px);
+      box-shadow: 4px 4px 0px #ffb6b6;
+    }
+
+    #result {
+      font-size: 28px;
+      margin-top: 25px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    /* === ANIMACJE === */
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes blinkColor {
+      0%, 100% { color: black; }
+      50% { color: red; }
+    }
+
+    .shake {
+      display: inline-block;
+      animation: shake 0.4s, blinkColor 0.4s;
+    }
+  </style>
+
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+
+  <nav class="funbar">
+    <h1>🥴 FizzBuzzator 3000</h1>
+    <ul>
+      <li><a href="#">🏠 Domek</a></li>
+      <li><a href="#">🔢 Liczby</a></li>
+      <li><a href="#">🐱 Kot</a></li>
+      <li><a href="#" id="banana">🍌 Sekret</a></li>
+    </ul>
+  </nav>
+
+  <label for="input">Podaj numer</label>
+  <input id="input" placeholder="np. 2137">
+  <button id="submit">Sprawdź</button>
+  <p id="result">Tu pojawi się wynik</p>
+
+</body>
+</html>
